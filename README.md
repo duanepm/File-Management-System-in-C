@@ -100,8 +100,7 @@ This project is a simple file management system written in C, supporting various
    compress <filename>
 
 11. Decompress a file:
-   ```bash
-   decompress <filename>
+   ```bash decompress <filename>```
 
 12. Show file size:
    ```bash
