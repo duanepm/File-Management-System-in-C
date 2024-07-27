@@ -59,58 +59,55 @@ This project is a simple file management system written in C, supporting various
    
 ## Commands
 
-1. List all files:
+List all files:
    ```bash
    list
-   
-2. Create a file:
+   ```
+Create a file:
    ```bash
    create <filename>
-   
-3. Delete a file:
+   ```
+Delete a file:
    ```bash
    delete <filename>
-   
-4. Read a file:
+   ```
+Read a file:
    ```bash
    read <filename>
-
-5. Write to a file:
+   ```
+Write to a file:
    ```bash
    write <filename> <content>
-
-6. Encrypt a file:
+   ```
+Encrypt a file:
    ```bash
    encrypt <filename> <password>
-
-7. Decrypt a file:
+   ```
+Decrypt a file:
    ```bash
    decrypt <filename> <password>
-
-8. Copy a file:
+   ```
+Copy a file:
    ```bash
    copy <source> <destination>
-
-9. Move a file:
+   ```
+Move a file:
    ```bash
    move <source> <destination>
-
-10. Compress a file:
+   ```
+Compress a file:
    ```bash
    compress <filename>
    ```
-
-11. Decompress a file:
+Decompress a file:
    ```bash
    decompress <filename>
    ```
-
-13. Show file size:
+Show file size:
    ```bash
    showsize <filename>
    ```
-
-13. Delete Directory:
+Delete Directory:
    ```bash
    delDir
    ```
