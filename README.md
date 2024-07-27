@@ -51,12 +51,14 @@ This project is a simple file management system written in C, supporting various
 3. Ensure the bash script (run.sh) is executable:
    ```bash
    chmod +x run.sh
+   
 ## Usage
 
-1. To start the file management system, run the bash script: 
+To start the file management system, run the bash script: 
    ```bash
    ./run.sh
-   
+   ```
+
 ## Commands
 
 List all files:
