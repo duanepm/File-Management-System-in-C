@@ -44,7 +44,10 @@ This project is a simple file management system written in C, supporting various
 
 ### Installation
 
-1. Clone the repository or download the source code.
+1.  Clone the repository:
+   ```bash
+   git clone https://github.com/duanepm/File-Management-System-in-C.git
+   ```
 2. Compile the C program:
    ```bash
    gcc -o file_manager file_manager.c
