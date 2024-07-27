@@ -95,22 +95,25 @@ This project is a simple file management system written in C, supporting various
    ```bash
    move <source> <destination>
 
-1. Compress a file:
+10. Compress a file:
    ```bash
    compress <filename>
+   ```
 
 11. Decompress a file:
-   ```bash decompress <filename>```
+   ```bash
+   decompress <filename>
+   ```
 
-12. Show file size:
+13. Show file size:
    ```bash
    showsize <filename>
+   ```
 
 13. Delete Directory:
    ```bash
    delDir
-
-
+   ```
 
 ## Encryption and Security
 
