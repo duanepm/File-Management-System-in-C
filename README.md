@@ -122,7 +122,7 @@ This system uses XOR encryption for securing files. When a file is encrypted, th
 
 - **Encryption**: Each byte of the file's content is XORed with the corresponding byte of the password. If the password is shorter than the content, it is repeated to match the content length.
 - **Decryption**: The same XOR operation is applied again using the same password to recover the original content.
-- 
+  
 ## Compression and Decompression
 
 The system uses Run-Length Encoding (RLE) for compressing and decompressing files. This simple compression algorithm is effective for files with many consecutive repeated characters.
