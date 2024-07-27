@@ -4,5 +4,5 @@ while :
 do
     read -p "---> " -a command_array
 
-    ./a.out "${command_array[@]}" 
+    ./file_manager.out "${command_array[@]}" 
 done
