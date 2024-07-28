@@ -64,6 +64,8 @@ To start the file management system, run the bash script:
 
 ## Commands
 
+![filesys](https://github.com/user-attachments/assets/6133037e-c59a-4fd7-87ab-388830447b8d)
+
 List all files:
    ```bash
    list
