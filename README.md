@@ -14,7 +14,7 @@
 7. [Directory Structure](#directory-structure)
 8. [Limitations](#limitations)
 9. [Future Improvements](#future-improvements)
-10. [License](#license)
+10. [Contributing](#contributing)
 
 ## Overview
 
