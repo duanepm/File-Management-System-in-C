@@ -12,9 +12,7 @@
 5. [Encryption & Security](#encryption--security)  
 6. [Compression & Decompression](#compression--decompression)  
 7. [Directory Structure](#directory-structure)  
-8. [Limitations](#limitations)  
-9. [Future Improvements](#future-improvements)  
-10. [Contributing](#contributing)  
+8. [Contributing](#contributing)  
 
 ---
 
