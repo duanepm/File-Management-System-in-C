@@ -1,7 +1,5 @@
 # **Efficient File Management System in C** 🚀
 
----
-
 ## 📌 **Table of Contents**  
 
 1. [Overview](#overview)  
