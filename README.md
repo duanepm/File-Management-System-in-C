@@ -1,6 +1,8 @@
 # **Efficient File Management System in C** 🚀
 
-## **Table of Contents**  
+---
+
+## 📌 **Table of Contents**  
 
 1. [Overview](#overview)  
 2. [Features](#features)  
@@ -16,13 +18,14 @@
 
 ---
 
-## **Overview**  
+## 📖 **Overview**  
+The **Efficient File Management System in C** is a high-performance, CLI-based file manager designed for **Unix/Linux environments**. It leverages **low-level system calls**, **multi-threading**, and **memory-mapped I/O** for **fast and efficient file operations**. 
 
-The **Efficient File Management System in C** is a high-performance, CLI-based file manager designed for **Unix/Linux environments**. It leverages **low-level system calls**, **multi-threading**, and **memory-mapped I/O** for **fast and efficient file operations**. The system also includes **encryption, compression, and decompression** capabilities to enhance security and storage efficiency. A Bash-integrated CLI tool is provided for seamless automation and ease of use.
+Key functionalities include **encryption, compression, and decompression**, ensuring security and optimized storage. A **Bash-integrated CLI tool** is provided for seamless automation and ease of use.
 
 ---
 
-## **Features**  
+## ✨ **Features**  
 
 ✅ **Comprehensive File Operations**: Create, delete, read, write, copy, and move files efficiently.  
 ✅ **Multi-Threaded Processing**: Enhances performance and responsiveness.  
@@ -33,13 +36,14 @@ The **Efficient File Management System in C** is a high-performance, CLI-based f
 
 ---
 
-## **Getting Started**  
+## 🚀 **Getting Started**  
 
-### **Prerequisites**  
-- **C Compiler** (e.g., `gcc`)  
-- **Bash Shell** (for script execution)  
+### 🔧 **Prerequisites**  
+Ensure you have the following installed on your system:
+- **C Compiler** (e.g., `gcc`)
+- **Bash Shell** (for script execution)
 
-### **Installation**  
+### 📥 **Installation**  
 1. **Clone the repository**:  
    ```bash
    git clone https://github.com/duanepm/File-Management-System-in-C.git
@@ -55,14 +59,13 @@ The **Efficient File Management System in C** is a high-performance, CLI-based f
 
 ---
 
-## **Usage**  
-
-Run the file management system:  
+## 📌 **Usage**  
+Run the file management system:
 ```bash
 ./run.sh
 ```
 
-### **Commands**  
+### 🛠 **Commands**  
 
 | Command | Description |
 |---------|-------------|
@@ -81,23 +84,36 @@ Run the file management system:
 
 ---
 
-## **Encryption & Security**  
-This system uses **AES-based encryption** for securing files, ensuring that sensitive data remains protected.  
+## 🔒 **Encryption & Security**  
+This system implements **AES-based encryption** for securing files, ensuring that sensitive data remains protected from unauthorized access.  
 
 ---
 
-## **Compression & Decompression**  
-Utilizes **Run-Length Encoding (RLE)** to optimize file storage. Best suited for files with repetitive data.  
+## 📦 **Compression & Decompression**  
+Utilizes **Run-Length Encoding (RLE)** to optimize file storage, making it efficient for compressing repetitive data patterns.  
 
 ---
 
-## **Directory Structure**  
-- `file_manager.c` - Main C program  
-- `run.sh` - Bash script for CLI interaction  
-- `README.md` - Documentation  
+## 📂 **Directory Structure**  
+```
+📁 File-Management-System-in-C/
+├── 📜 file_manager.c    # Main C program
+├── 📜 run.sh            # Bash script for CLI interaction
+├── 📜 README.md         # Documentation
+```
 
 ---
 
-## **Contributing**  
-Contributions are welcome! Fork the repo, create a feature branch, and submit a pull request. 🚀
+## 🤝 **Contributing**  
+Contributions are welcome! To contribute:
+1. **Fork the repository**
+2. **Create a feature branch**
+3. **Submit a pull request** 🚀  
 
+💡 Feel free to raise issues or suggest improvements!
+
+---
+
+🔗 **License**: This project is licensed under the **MIT License**. 
+
+🌟 **Star this repository if you found it helpful!** ⭐
