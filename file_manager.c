@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <openssl/aes.h>
+#include <openssl/rand.h>
 
 #define MAX_FILES 100
 #define MAX_FILE_NAME 100
@@ -103,63 +105,18 @@ void xorEncryptDecrypt(char *data, const char *key, int dataLength) {
     }
 }
 
-void encryptFile(const char *filename, const char *password) {
-    int fileIndex = -1;
+unsigned char aes_key[AES_KEY_SIZE / 8] = "0123456789abcdef0123456789abcdef";
 
-    for (int i = 0; i < MAX_FILES; ++i) {
-        if (files[i].isOccupied == 1 && strcmp(files[i].name, filename) == 0) {
-            fileIndex = i;
-            break;
-        }
-    }
-
-    if (fileIndex == -1) {
-        printf("File '%s' not found. Cannot encrypt.\n", filename);
-        return;
-    }
-
-    if (files[fileIndex].isEncrypted) {
-        printf("File '%s' is already encrypted.\n", filename);
-        return;
-    }
-
-    xorEncryptDecrypt(files[fileIndex].content, password, strlen(files[fileIndex].content));
-    files[fileIndex].isEncrypted = 1;
-    strcpy(files[fileIndex].password, password);
-
-    printf("File '%s' encrypted successfully.\n", filename);
+void encryptAES(const unsigned char *input, unsigned char *output, int length) {
+    AES_KEY enc_key;
+    AES_set_encrypt_key(aes_key, AES_KEY_SIZE, &enc_key);
+    AES_encrypt(input, output, &enc_key);
 }
 
-void decryptFile(const char *filename, const char *password) {
-    int fileIndex = -1;
-
-    for (int i = 0; i < MAX_FILES; ++i) {
-        if (files[i].isOccupied == 1 && strcmp(files[i].name, filename) == 0) {
-            fileIndex = i;
-            break;
-        }
-    }
-
-    if (fileIndex == -1) {
-        printf("File '%s' not found. Cannot decrypt.\n", filename);
-        return;
-    }
-
-    if (!files[fileIndex].isEncrypted) {
-        printf("File '%s' is not encrypted. Cannot decrypt.\n", filename);
-        return;
-    }
-
-    if (strcmp(files[fileIndex].password, password) != 0) {
-        printf("Incorrect password. Cannot decrypt '%s'.\n", filename);
-        return;
-    }
-
-    xorEncryptDecrypt(files[fileIndex].content, password, strlen(files[fileIndex].content));
-    files[fileIndex].isEncrypted = 0;
-    memset(files[fileIndex].password, 0, sizeof(files[fileIndex].password));
-
-    printf("File '%s' decrypted successfully.\n", filename);
+void decryptAES(const unsigned char *input, unsigned char *output) {
+    AES_KEY dec_key;
+    AES_set_decrypt_key(aes_key, AES_KEY_SIZE, &dec_key);
+    AES_decrypt(input, output, &dec_key);
 }
 
 void readFile(const char *filename) 
@@ -503,13 +460,13 @@ int main(int argc, char *argv[])
             printf("Correct Syntax: encrypt <filename> <password>\n");
             return 1;
         }
-        encryptFile(argv[2], argv[3]);
+        encryptAES(argv[2], argv[3]);
     } else if (strcmp(argv[1], "decrypt") == 0) {
         if (argc != 4) {
             printf("Correct Syntax: decrypt <filename> <password>\n");
             return 1;
         }
-        decryptFile(argv[2], argv[3]);
+        decryptAES(argv[2], argv[3]);
     } else if (strcmp(argv[1], "copy") == 0) {
         if (argc != 4) {
             printf("Correct Syntax: copy <source> <destination>\n");
